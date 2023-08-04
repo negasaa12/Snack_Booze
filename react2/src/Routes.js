@@ -14,8 +14,7 @@ const RoutePaths = () => {
          <nav>
       <ul>
         <li>
-          <NavLink exact to="/" >
-            Home          </NavLink>
+          <NavLink exact to="/" >Home</NavLink>
         </li>
         <li>
           <NavLink to="/snacks" >
@@ -32,9 +31,9 @@ const RoutePaths = () => {
         <Routes>
             <Route exact path="/" element={<ItemList foodItems={foodItems} alcoholicDrinks={alcoholicDrinks} />}></Route>
             <Route exact path="/snacks" element={<MenuItems  type="snacks"items={foodItems}/>}></Route>
-            <Route exact path="/snacks/:name" element={<MenuItems items={foodItems}/>}></Route>
-            <Route exact path="/drinks" element={<MenuItems  type="snacks" items={alcoholicDrinks}/>}></Route>
-            <Route exact path="/drinks/:name" ></Route>
+            <Route exact path="/snacks/:name" element={<Item  items={[alcoholicDrinks,foodItems]}/>}></Route>
+            <Route exact path="/drinks" element={<MenuItems type="drinks" items={alcoholicDrinks}/>}></Route>
+            <Route exact path="/drinks/:name" element={<Item items={[alcoholicDrinks, foodItems]}/>} ></Route>
         </Routes>
         </>
     )
