@@ -6,8 +6,7 @@ import { useEffect, useState } from "react";
 const MenuItems = ({items,type})=> {
 
 
-
-
+    console.log(items,type)
 
     return (
         <>

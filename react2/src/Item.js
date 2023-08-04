@@ -1,17 +1,17 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-   import { unroll } from "./unroll/unroll";
+import { unroll } from "./unroll/unroll";
 
 
 
     const Item = ({items})=>{
 
         const {name} = useParams();
-        const  unfoldedItems = unroll(items);
+       
        
        
         
-    const foundItem = unfoldedItems.find((item)=> item.name === name);
+    const foundItem = items.drinks.find((item)=> item.name === name) ||items.snacks.find((item)=> item.name === name);
  
     return (
        <>

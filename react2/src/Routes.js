@@ -5,22 +5,33 @@ import { foodItems, alcoholicDrinks } from "./Inventory";
 import MenuItems from "./MenuItem";
 import Item from "./Item";
 import NewItemForm from "./NewItemForm";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const RoutePaths = () => {
-  
-    const [snacks,setSnacks] = useState(foodItems);
-    const [drinks, setDrinks] = useState(alcoholicDrinks);
 
-    const addSnack = (name,price,description) => {
-        setSnacks(snacks=> [...snacks, {name, price,description}])
+    // const [snacks,setSnacks] = useState(foodItems);
+    // const [drinks, setDrinks] = useState(alcoholicDrinks);
+
+    // const addSnack = (name,price,description) => {
+    //     setDrinks([...snacks, {name: name, price: price, description}])
+    // }
+
+    const items ={
+      snacks: foodItems, drinks: alcoholicDrinks
     }
-    console.log(snacks)
-    
-  //   const addDrink = (name,price,description) => {
-  //     setDrinks([...drinks, {name: name, price: price, description: description}])
-  // }
-    
+    const [products, setProducts] = useState(items);
+
+   
+const additem = (name, price, description, category) => {
+  setProducts((prevProducts) => ({
+    ...prevProducts,
+    [category]: [...prevProducts[category], { name, price, description }]
+  }));
+};
+
+
+
+    console.log( "ROUTESSSSS STATE", products);
     return(
         <>
          <nav>
@@ -38,15 +49,21 @@ const RoutePaths = () => {
            Drinks
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/new" activeClassName="active">
+           Add
+          </NavLink>
+        </li>
+
       </ul>
     </nav>
         <Routes>
-            <Route exact path="/" element={<ItemList foodItems={snacks} alcoholicDrinks={drinks} />}></Route>
-            <Route exact path="/snacks" element={<MenuItems  type="snacks"items={snacks}/>}></Route>
-            <Route exact path="/snacks/:name" element={<Item  items={[snacks,drinks]}/>}></Route>
-            <Route exact path="/drinks" element={<MenuItems type="drinks" items={drinks}/>}></Route>
-            <Route exact path="/drinks/:name" element={<Item items={[snacks,drinks]}/>} ></Route>
-            <Route exact path="/new" element={<NewItemForm additem={addSnack}/>} ></Route>
+            <Route exact path="/" element={<ItemList items={products} />}></Route>
+            <Route exact path="/snacks" element={<MenuItems  type="snacks"items={products.snacks}/>}></Route>
+            <Route exact path="/snacks/:name" element={<Item  items={products}/>}></Route>
+            <Route exact path="/drinks" element={<MenuItems type="drinks" items={products.drinks}/>}></Route>
+            <Route exact path="/drinks/:name" element={<Item items={products}/>} ></Route>
+            <Route exact path="/new" element={<NewItemForm additem={additem}/>} ></Route>
         </Routes>
         </>
     )
