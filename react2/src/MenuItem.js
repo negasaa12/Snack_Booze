@@ -3,21 +3,20 @@ import { Link } from "react-router-dom";
 
 
 
-const MenuItems = ({foodItems})=> {
+const MenuItems = ({items,type})=> {
 
     
     return (
         <>
-
-        {foodItems.map((food)=> (
-            <ul>  
-            <Link>{food.name}</Link>
-            </ul>
+      <ul>
+        {items.map((item) => (
+          <li key={item.name}>
+            <Link to={`/${type}/${item.name}`}>{item.name}</Link>
+          </li>
         ))}
-       
-        </>
-    
-    )
+      </ul>
+    </>
+  );
 }
 
 export default MenuItems;
