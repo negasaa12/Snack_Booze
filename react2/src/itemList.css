@@ -1,0 +1,49 @@
+.itemList-container {
+    background-color: #F2EAD8;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  
+  .itemList-h3 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .itemList-p {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .itemList-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .itemList-li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .itemList-li strong {
+    color: #555;
+  }
+  
+  .itemList-li:last-child {
+    margin-bottom: 15px;
+  }
+  
+  /* Add some spacing between paragraphs */
+  .itemList-p + .itemList-p {
+    margin-top: 15px;
+  }
+  
