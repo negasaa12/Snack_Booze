@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { unroll } from "./unroll/unroll";
-
+import "./item.css";
 
 
     const Item = ({items})=>{
@@ -14,11 +14,13 @@ import { unroll } from "./unroll/unroll";
     const foundItem = items.drinks.find((item)=> item.name === name) ||items.snacks.find((item)=> item.name === name);
  
     return (
-       <>
-       <h2> {foundItem.name}</h2>
-       <p>{foundItem.description}</p>
-       <p>{foundItem.price}</p>
-       </>)
+        <div className="item-details-container">
+          <h2 className="item-name">{foundItem.name}</h2>
+          <p className="item-description">{foundItem.description}</p>
+          <p className="item-price">Price: ${foundItem.price}</p>
+          
+        </div>
+      );
 
 }
 export default Item;

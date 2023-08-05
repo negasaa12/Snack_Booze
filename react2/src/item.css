@@ -1,0 +1,36 @@
+.item-details-container {
+    background-color: #FAEAC2;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .item-name {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .item-description {
+    font-size: 30px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .item-price {
+    font-size: 30px;
+    color: #777;
+    font-weight: bold;
+  }
+  
+  .item-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
