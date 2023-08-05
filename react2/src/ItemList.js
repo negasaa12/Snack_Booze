@@ -10,7 +10,7 @@ const ItemList = ({items})=>{
         <>
         <h2> Snack & Booze </h2>
         
-        <h3> We have {items.snacks.length}</h3>
+        <h3> We have {items.snacks.length} Snacks & {items.drinks.length} Drinks</h3>
         </>
     )
 }

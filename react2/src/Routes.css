@@ -1,0 +1,37 @@
+.nav-container {
+    background-color: #D4DBA7;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+  }
+  
+  .nav-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+  }
+  
+  .nav-li {
+    margin-right: 20px;
+  }
+  
+  .nav-NavLink {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+  }
+  
+  .nav-NavLink:hover {
+    background-color: #a9c45e;
+    border-radius: 10px;
+    
+  }
+  
+  .active {
+    background-color: #bfc291;
+    border-radius: 10px;
+  }
+  

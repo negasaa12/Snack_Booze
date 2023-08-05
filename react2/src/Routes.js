@@ -1,4 +1,5 @@
 import React from "react";
+import "./Routes.css";
 import { Route, Routes, NavLink} from "react-router-dom";
 import ItemList from "./ItemList";
 import { foodItems, alcoholicDrinks } from "./Inventory";
@@ -9,12 +10,7 @@ import { useState, useEffect } from "react";
 
 const RoutePaths = () => {
 
-    // const [snacks,setSnacks] = useState(foodItems);
-    // const [drinks, setDrinks] = useState(alcoholicDrinks);
-
-    // const addSnack = (name,price,description) => {
-    //     setDrinks([...snacks, {name: name, price: price, description}])
-    // }
+   
 
     const items ={
       snacks: foodItems, drinks: alcoholicDrinks
@@ -34,23 +30,23 @@ const additem = (name, price, description, category) => {
     console.log( "ROUTESSSSS STATE", products);
     return(
         <>
-         <nav>
-      <ul>
-        <li>
-          <NavLink exact to="/" >Home</NavLink>
+         <nav className="nav-container">
+      <ul className="nav-ul">
+        <li className="nav-li">
+          <NavLink  className="nav-NavLink"exact to="/" >Home</NavLink>
         </li>
-        <li>
-          <NavLink to="/snacks" >
+        <li className="nav-li">
+          <NavLink className="nav-NavLink" to="/snacks" >
             Snacks
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/drinks" activeClassName="active">
+        <li className="nav-li">
+          <NavLink  className="nav-NavLink" to="/drinks" activeClassName="active">
            Drinks
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/new" activeClassName="active">
+        <li className="nav-li">
+          <NavLink  className="nav-NavLink" to="/new" activeClassName="active">
            Add
           </NavLink>
         </li>
