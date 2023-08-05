@@ -2,7 +2,7 @@ import React from "react";
 import "./NotFound.css";
 
 
-
+  //Shows 404 page for not found item
 const NotFound = () => {
     return (
       <div className="NotFound-container">

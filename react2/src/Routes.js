@@ -9,23 +9,25 @@ import NewItemForm from "./NewItemForm";
 import { useState, useEffect } from "react";
 import NotFound from "./NotFound";
 
+// A react component responsible for rendering different routes of the application //
 
 const RoutePaths = () => {
 
    
-
+    // State to manage the products (foodItems and alcoholicDrinks).
     const items ={
       snacks: foodItems, drinks: alcoholicDrinks
     }
     const [products, setProducts] = useState(items);
     const navigate = useNavigate();
    
-const additem = (name, price, description, category) => {
-  setProducts((prevProducts) => ({
-    ...prevProducts,
-    [category]: [...prevProducts[category], { name, price, description }]
-  }));
-};
+      // State to manage the products (foodItems and alcoholicDrinks).
+    const additem = (name, price, description, category) => {
+        setProducts((prevProducts) => ({
+        ...prevProducts,
+          [category]: [...prevProducts[category], { name, price, description }]
+    }));
+    };
 
 
 

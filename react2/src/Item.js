@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./item.css";
 
-
+    // Component shows the item with their description, price, name
     const Item = ({items})=>{
 
         const {name} = useParams();

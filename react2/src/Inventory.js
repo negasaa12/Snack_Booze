@@ -1,5 +1,8 @@
 
-
+/**
+ * An array containing various alcoholic drinks.
+ * @type {AlcoholicDrink[]}
+ */
 const alcoholicDrinks = [
   { "name": "whiskey", "price": 40, "description": "A classic and strong distilled spirit made from various grains." },
   { "name": "vodka", "price": 25, "description": "A clear and versatile spirit distilled from fermented grains or potatoes." },
@@ -11,6 +14,10 @@ const alcoholicDrinks = [
   { "name": "cocktail", "price": 15, "description": "A mixed drink combining various spirits and flavors for a unique taste experience." }
 ];
 
+/**
+ * An array containing various food items.
+ * @type {FoodItem[]}
+ */
 const foodItems = [
   { "name": "burger", "price": 5.99, "description": "A delicious sandwich made with a beef or plant-based patty, topped with various ingredients." },
   { "name": "pizza", "price": 6.67, "description": "A classic Italian dish consisting of a flat, round crust topped with sauce, cheese, and various toppings." },
@@ -22,4 +29,4 @@ const foodItems = [
   { "name": "fries", "price": 3.99, "description": "Deep-fried potato strips, a popular side dish." }
 ];
 
-  export {alcoholicDrinks, foodItems};
+export { alcoholicDrinks, foodItems };

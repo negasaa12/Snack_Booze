@@ -2,7 +2,13 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NewItemForm.css";
+
+
+// React component to render a form for adding a new item to the inventory.
 const NewItemForm = ({ additem }) => {
+  
+
+  // INITIAL STATE for the form fields.
   const initial_State = {
     name: "",
     price: "",
@@ -13,6 +19,7 @@ const NewItemForm = ({ additem }) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState(initial_State);
 
+  // Handles changes to the form fields and updates the formData state accordingly.
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((formData) => ({
@@ -21,6 +28,8 @@ const NewItemForm = ({ additem }) => {
     }));
   };
 
+  // Handles form submission, adds the new item to the inventory, and navigates to the category page.
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, price, description, category } = formData;

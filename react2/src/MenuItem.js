@@ -2,7 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Menuitem.css"
 
+// A React component to display a list of menu items for a specific type (snacks or drinks).
 
+
+// * A React component to display a list of menu items for a specific type (snacks or drinks).
 const MenuItems = ({ items, type }) => {
  
 

@@ -1,9 +1,12 @@
 import React from "react";
 import "./itemList.css";
 
+// component to display the item list information.
 
+//
 const ItemList = ({items})=>{
 
+     // Calculate the total number of snacks and drinks.
     const totalSnacks = items.snacks.length;
     const totalDrinks = items.drinks.length;
     const totalItems = totalSnacks + totalDrinks;
