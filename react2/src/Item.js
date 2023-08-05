@@ -15,7 +15,7 @@ import "./item.css";
  
     return (
         <div className="item-details-container">
-          <h2 className="item-name">{foundItem.name}</h2>
+          <h2 className="item-name">{foundItem.name.toUpperCase()}</h2>
           <p className="item-description">{foundItem.description}</p>
           <p className="item-price">Price: ${foundItem.price}</p>
           

@@ -1,12 +1,14 @@
 import React from "react";
 import "./Routes.css";
-import { Route, Routes, NavLink} from "react-router-dom";
+import { Route, Routes, NavLink , useNavigate} from "react-router-dom";
 import ItemList from "./ItemList";
 import { foodItems, alcoholicDrinks } from "./Inventory";
 import MenuItems from "./MenuItem";
 import Item from "./Item";
 import NewItemForm from "./NewItemForm";
 import { useState, useEffect } from "react";
+import NotFound from "./NotFound";
+
 
 const RoutePaths = () => {
 
@@ -16,7 +18,7 @@ const RoutePaths = () => {
       snacks: foodItems, drinks: alcoholicDrinks
     }
     const [products, setProducts] = useState(items);
-
+    const navigate = useNavigate();
    
 const additem = (name, price, description, category) => {
   setProducts((prevProducts) => ({
@@ -27,7 +29,7 @@ const additem = (name, price, description, category) => {
 
 
 
-    console.log( "ROUTESSSSS STATE", products);
+     
     return(
         <>
          <nav className="nav-container">
@@ -60,6 +62,7 @@ const additem = (name, price, description, category) => {
             <Route exact path="/drinks" element={<MenuItems type="drinks" items={products.drinks}/>}></Route>
             <Route exact path="/drinks/:name" element={<Item items={products}/>} ></Route>
             <Route exact path="/new" element={<NewItemForm additem={additem}/>} ></Route>
+            <Route path="*" element={<NotFound/>}></Route>
         </Routes>
         </>
     )

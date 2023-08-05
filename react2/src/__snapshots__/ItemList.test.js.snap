@@ -2,11 +2,40 @@
 
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
-  <h2>
-     Snack & Booze 
-  </h2>
-  <h3>
-     We have 8 Snacks & 8 Drinks
-  </h3>
+  <div
+    class="itemList-container"
+  >
+    <h3
+      class="itemList-h3"
+    >
+      Welcome to Snacks & Booze
+    </h3>
+    <p
+      class="itemList-p"
+    >
+      We offer a wide variety of 16 delicious treats, including:
+    </p>
+    <ul
+      class="itemList-ul"
+    >
+      <li
+        class="itemList-li"
+      >
+        <strong>
+          8 Kinds of Snacks
+        </strong>
+      </li>
+      <li>
+        <strong>
+          8 Refreshing Drinks
+        </strong>
+      </li>
+    </ul>
+    <p
+      class="itemList-p"
+    >
+      Whether you're craving something savory or looking for a refreshing beverage, we have something for everyone! Come and explore our delectable selection today.
+    </p>
+  </div>
 </DocumentFragment>
 `;

@@ -13,7 +13,7 @@ const MenuItems = ({ items, type }) => {
         {items.map((item) => (
           <li className="menu-item" key={item.name}>
             <Link to={`/${type}/${item.name}`} className="menu-item-link">
-              <span className="menu-item-name">{item.name}</span>
+              <span className="menu-item-name">{item.name.toUpperCase()}</span>
               <span className="menu-item-price">${item.price}</span>
             </Link>
           </li>

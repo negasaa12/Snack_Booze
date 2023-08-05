@@ -1,22 +1,26 @@
 .itemList-container {
-    background-color: #F2EAD8;
+    background-color: #d4ccb9;
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 5px;
-    max-width: 900px;
+    max-width: 2000px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 300px;
   }
   
+body{
+    background-color: #F0F2E4;
+ }
+  
   .itemList-h3 {
-    font-size: 24px;
-    color: #333;
+    font-size: 44px;
+    color: #8f7575;
     text-align: center;
     margin-bottom: 10px;
   }
   
   .itemList-p {
-    font-size: 16px;
+    font-size: 26px;
     color: #666;
     text-align: center;
     margin-bottom: 15px;
@@ -29,13 +33,13 @@
   }
   
   .itemList-li {
-    font-size: 18px;
-    color: #333;
+    font-size: 28px;
+    color: #8d7a7a;
     margin-bottom: 5px;
   }
   
   .itemList-li strong {
-    color: #555;
+    color: #998181;
   }
   
   .itemList-li:last-child {
