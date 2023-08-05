@@ -4,7 +4,7 @@ import "./Menuitem.css"
 
 
 const MenuItems = ({ items, type }) => {
-  console.log(items, type);
+ 
 
   return (
     <div className="menu-items-container">
